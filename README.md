@@ -43,49 +43,49 @@ The Library Management System is a Java-based application designed to manage boo
 
 Use the following command to clone the repository to your local machine:
 
-    git clone: https://github.com/Abinaya2004
+     git clone: https://github.com/Abinaya2004
 
 ## 2.Configure Database :
  Create a MySQL database named librarymanagement.
 
 # Run the provided SQL script to set up the tables:
 
-CREATE DATABASE librarymanagement;
-USE librarymanagement;
+    CREATE DATABASE librarymanagement;
+    USE librarymanagement;
 
-CREATE TABLE books (
+    CREATE TABLE books (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     author VARCHAR(255) NOT NULL,
     isbn VARCHAR(20),
     genre VARCHAR(50),
     quantity INT NOT NULL
-);
+    );
 
-CREATE TABLE borrowers (
+    CREATE TABLE borrowers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     contact_details VARCHAR(255)
-);
+    );
 
-CREATE TABLE borrowed_books (
+    CREATE TABLE borrowed_books (
     id INT AUTO_INCREMENT PRIMARY KEY,
     borrower_id INT,
     book_id INT,
     due_date DATE,
     FOREIGN KEY (borrower_id) REFERENCES borrowers(id),
     FOREIGN KEY (book_id) REFERENCES books(id)
-);
+    );
 
 # Set Up Database Connection :
 
 Update the DBHelper class with your MySQL credentials:
 
-public class DBHelper {
+    public class DBHelper {
     private static final String URL = "jdbc:mysql://localhost:3306/librarymanagement";
     private static final String USER = "your-username";
     private static final String PASSWORD = "your-password";
-}
+    }
 
 # Build and Run :
 
