@@ -39,13 +39,13 @@ The Library Management System is a Java-based application designed to manage boo
 
 # Setup :
 
-# 1.Clone the Repository :
+## 1.Clone the Repository :
 
 Use the following command to clone the repository to your local machine:
 
-git clone: https://github.com/Abinaya2004
+    git clone: https://github.com/Abinaya2004
 
-# 2.Configure Database :
+## 2.Configure Database :
  Create a MySQL database named librarymanagement.
 
 # Run the provided SQL script to set up the tables:
@@ -85,8 +85,6 @@ public class DBHelper {
     private static final String URL = "jdbc:mysql://localhost:3306/librarymanagement";
     private static final String USER = "your-username";
     private static final String PASSWORD = "your-password";
-
-    // Add methods to establish the database connection
 }
 
 # Build and Run :
